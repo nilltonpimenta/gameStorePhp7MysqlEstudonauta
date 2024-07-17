@@ -10,15 +10,44 @@
     <?php
         require_once "includes/banco.php";
         require_once "includes/funcoes.php";
+        $ordem = $_GET['o'] ?? 'n';
     ?>
     <div id="corpo">
         <?php include_once "topo.php"; ?>
         <h1>Escolha seu jogo</h1>
-        <form method="get" id="busca" action="index.php">Ordenar: Nome | Produtora | Nota Alta | Nota Baixa | Buscar: <input type="text" name="c" size="10" maxlength="40"><input type="submit" value="OK">
+        <form method="get" id="busca" action="index.php">
+            Ordenar:
+            <a href="index.php?o=n">Nome</a> | 
+			<a href="index.php?o=p">Produtora</a> | 
+			<a href="index.php?o=nA">Nota alta</a> | 
+			<a href="index.php?o=nB">Nota baixa</a> |
+            Buscar: <input type="text" name="c" size="10" maxlength="40"/> <input type="submit" value="OK"/>
         </form>
         <table class="listagem">
             <?php 
-                $q = "select j.cod, j.nome, g.genero, j.capa, p.produtora from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod";
+                $q = "select j.cod, j.nome, g.genero, j.capa, p.produtora from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod ";
+                
+                switch($ordem){
+				case "p":
+					$q .= "ORDER BY p.produtora";
+				    break;
+
+				case "nA":
+					$q .= "ORDER BY j.nota desc";
+				    break;
+
+				case "nB":
+					$q .= "ORDER BY j.nota asc";
+					break;
+
+				case "g":
+					$q .= "ORDER BY g.genero";
+					break;
+
+				default:
+					$q .= "ORDER BY j.nome";
+				}
+
                 $busca = $banco->query($q);
                 if (!$busca) {
                     echo "<tr><td>Infelizmente a busca deu errada.";
@@ -35,10 +64,6 @@
                     }
                 }
             ?>
-            <tr><td>Foto<td>Nome<td>Adm
-            <tr><td>Foto<td>Nome<td>Adm
-            <tr><td>Foto<td>Nome<td>Adm
-            <tr><td>Foto<td>Nome<td>Adm
         </table>
     </div>
     <?php require_once "rodape.php"; ?>
