@@ -21,3 +21,8 @@
         }
     }
         */
+
+        /* Depois de criar o banco
+        usuário: teste
+        senha: teste
+        */
