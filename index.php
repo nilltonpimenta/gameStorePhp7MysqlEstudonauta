@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Jogos</title>
     <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,200" />
 </head>
 <body>
     <?php
@@ -17,14 +18,18 @@
     <div id="corpo">
         <?php include_once "topo.php"; ?>
         <h1>Escolha seu jogo</h1>
-        <form method="get" id="busca" action="index.php">
-            Ordenar:
+        <?php echo msg_sucesso("Sucesso");
+        echo msg_aviso("Aviso");
+        echo msg_erro("Erro") ?>
+        <form method="get" action="index.php">
+            <p class="pequeno">Ordenar:
             <a href="index.php?o=n&c=<?=$chave?>">Nome</a> | 
 			<a href="index.php?o=p&c=<?=$chave?>">Produtora</a> | 
 			<a href="index.php?o=nA&c=<?=$chave?>">Nota alta</a> | 
 			<a href="index.php?o=nB&c=<?=$chave?>">Nota baixa</a> | 
             <a href="index.php">Mostrar todos</a> | 
-            Buscar: <input type="text" name="c" size="10" maxlength="40"/> <input type="submit" value="OK"/>
+            Buscar: <input type="text" name="c" size="10" maxlength="40"/>
+            <input type="submit" value="OK"/></p>
         </form>
         <table class="listagem">
             <?php 

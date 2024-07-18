@@ -16,8 +16,13 @@ div#corpo {
     box-shadow: 0px 0px 30px #777;
 }
 
-form#busca {
+/*form#busca {
     font-size: 11px;
+    text-align: right;
+}*/
+
+p.pequeno {
+    font-size: 11pt;
     text-align: right;
 }
 
@@ -74,4 +79,28 @@ footer {
     text-align: center;
     font-family: Arial;
     font-size: 10px;
+}
+
+div.sucesso {
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: rgb(226, 239, 218);
+    color: rgb(74, 116, 67);
+}
+
+div.aviso {
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: rgb(251, 248, 229);
+    color: rgb(134, 110, 66);
+}
+
+div.erro {
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: rgb(239, 223, 222);
+    color: rgb(157, 75, 69);
 }
