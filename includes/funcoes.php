@@ -30,3 +30,9 @@
             <span class='material-symbols-outlined'>report</span> $m </div>";
             return $resp;
         }
+
+        function logout(){
+            unset($_SESSION['user']);
+            unset($_SESSION['nome']);
+            unset($_SESSION['tipo']);
+        }
