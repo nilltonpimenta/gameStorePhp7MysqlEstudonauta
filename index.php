@@ -13,7 +13,6 @@
         require_once "includes/funcoes.php";
         $ordem = $_GET['o'] ?? "n";
         $chave = $_GET['c'] ?? "";
-
     ?>
     <div id="corpo">
         <?php include_once "topo.php"; ?>
@@ -43,19 +42,15 @@
 				case "p":
 					$q .= " ORDER BY p.produtora ";
 				    break;
-
 				case "nA":
 					$q .= " ORDER BY j.nota desc ";
 				    break;
-
 				case "nB":
 					$q .= " ORDER BY j.nota asc ";
 					break;
-
 				case "g":
 					$q .= " ORDER BY g.genero ";
 					break;
-
 				default:
 					$q .= " ORDER BY j.nome ";
 				}
