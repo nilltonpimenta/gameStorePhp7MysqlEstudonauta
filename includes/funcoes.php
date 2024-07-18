@@ -13,26 +13,20 @@
             return "<a href='index.php'><span class='material-symbols-outlined'>arrow_back</span></a>";
         }
 
-        function msg_sucesso($m){
+        function msg_sucesso($msg){
             $resp = "<div class='sucesso'>
-            <span class='material-symbols-outlined'>task_alt</span> $m </div>";
+            <span class='material-symbols-outlined'>task_alt</span> $msg </div>";
             return $resp;
         }
 
-        function msg_aviso($m){
+        function msg_aviso($msg){
             $resp = "<div class='aviso'>
-            <span class='material-symbols-outlined'>warning</span> $m </div>";
+            <span class='material-symbols-outlined'>warning</span> $msg </div>";
             return $resp;
         }
 
-        function msg_erro($m){
+        function msg_erro($msg){
             $resp = "<div class='erro'>
-            <span class='material-symbols-outlined'>report</span> $m </div>";
+            <span class='material-symbols-outlined'>report</span> $msg </div>";
             return $resp;
-        }
-
-        function logout(){
-            unset($_SESSION['user']);
-            unset($_SESSION['nome']);
-            unset($_SESSION['tipo']);
         }
