@@ -6,12 +6,13 @@
     <title>Detalhes do jogo</title>
     <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,200" />
-</head>
-<body>
     <?php
         require_once "includes/banco.php";
+        require_once "includes/login.php";
         require_once "includes/funcoes.php";
     ?>
+</head>
+<body>
     <div id="corpo">
         <?php
             include_once "topo.php";

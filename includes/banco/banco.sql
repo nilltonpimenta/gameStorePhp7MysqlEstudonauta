@@ -130,8 +130,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuario`, `nome`, `senha`, `tipo`) VALUES
-('admin', 'Gustavo Guanabara', '$2y$10$UpMQCcir.v649HrdLvUXiOC/ftU7xWhSxm8QhX.VzSe9LZHhvW/Ty', 'admin'),
-('teste', 'João da Silva', '$2y$10$w7on7cjLKNtmJUGkiHIXoOQAwTJzkgxXqLmjtfDUkCXmQK0784.IS', 'editor');
+('admin', 'Gustavo Guanabara', '$2y$10$3gbDIZk8WRQP3hlVhYxQZuGhamsYUd0aW2m7hCtD28gC2.ExSpLeS', 'admin'),
+('teste', 'João da Silva', '$2y$10$JSJsIiUFE/lzS1Nx5her6O2EGy3JTB0mfXOc3KgMDhejXz0mzc28y', 'editor');
 
 --
 -- Indexes for dumped tables
