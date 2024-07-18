@@ -25,4 +25,7 @@
         /* Depois de criar o banco
         usuário: teste
         senha: teste
+        ou
+        usuário: admin
+        senha: admin
         */
