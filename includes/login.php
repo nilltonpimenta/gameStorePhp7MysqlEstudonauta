@@ -1,13 +1,12 @@
 <?php
     session_start();
 
-    /*if (!isset($_SESSION['user'])) {
+    if (!isset($_SESSION['user'])) {
         $_SESSION['user'] = "";
         $_SESSION['nome'] = "";
         $_SESSION['tipo'] = "";
-    }*/
-    
-    
+    }
+        
     function cripto($senha){
         $cripto = '';
         for ($pos=0; $pos < strlen($senha); $pos++) { 
@@ -33,13 +32,13 @@
         unset($_SESSION['tipo']);
     }
 
-    /*function is_logado(){
+    function is_logado(){
         if(empty($_SESSION['user'])){
             return false;
         } else {
             return true;
         }
-    }*/
+    }
 
     function is_admin() {
         $tipo = $_SESSION['tipo'] ?? null;
