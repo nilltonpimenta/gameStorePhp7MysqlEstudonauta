@@ -16,5 +16,6 @@
     <div id="corpo">
         <h1>???</h1>
     </div>
+    <?php include_once "rodape.php"; ?>
 </body>
 </html>
