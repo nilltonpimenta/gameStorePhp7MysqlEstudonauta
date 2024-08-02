@@ -44,7 +44,7 @@ table.listagem td {
 
 /* The nth-child() selects odd lines (tr) */
 table.listagem tr:nth-child(odd) {
-    background-color: darkgray;
+    background-color: lightgray;
 }
 
 /* Setting the width of the first (1) column (td) */
